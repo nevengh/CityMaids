@@ -1,0 +1,86 @@
+.Hero {
+    background-image: url(../../assets/images/slider8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    border-bottom-left-radius: 30%;
+    position: relative;
+}
+
+.hero_content_container {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%, -50%);
+    opacity: 0;
+     /* تأخير الأنيميشن للعنصر الرئيسي */
+     animation: content-opacity .9s linear  forwards;
+}
+
+.hero_content_container h1 {
+    color: white;
+    font-size: 45px;
+    opacity: 0;
+    animation: content-opacity .9s linear .3s forwards;
+}
+
+.hero_content_container p {
+    animation: content-opacity 0.9s ease-in .6s forwards; /* إضافة الأنيميشن مع التأخير */
+    margin-top: 10px;
+    max-width: 600px;
+    color: white;
+    font-size: 25px;
+    opacity: 0;
+}
+
+.contact-btn {
+    text-decoration: none;
+    margin-top: 10px;
+    background: #279e64;
+    padding: 17px 34px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: 0.5s;
+    opacity: 0;
+    animation: content-opacity 0.9s ease-in .9s forwards;
+}
+
+.contact-btn:hover {
+    background: #007bff;
+}
+
+.contact-btn span {
+    margin-left: 10px;
+}
+
+@keyframes content-opacity {
+    0% {
+        opacity: 0; /* البداية */
+        
+    }
+    
+    100% {
+        opacity: 1; /* النهاية */
+        
+    }
+}
+
+@media(max-width:600px) {
+    .Hero {
+        background-position: top;
+    }
+    
+    .hero_content_container {
+        width: 100%;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

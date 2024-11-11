@@ -1,0 +1,40 @@
+.Header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 100px;
+    background: #ffffff51;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 5px 20px; */
+    /* border-bottom: 1px solid red; */
+}
+.logo img{
+    width: 200px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.nav-menu .nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.nav-links a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 20px;
+    height: 2px;
+    background: #279e64;
+    transition:  width .4s ease-in;
+}
+.nav-links a:hover::before {
+    width: 100%; /* عند التمرير، اجعل عرض الخط كامل */
+}
